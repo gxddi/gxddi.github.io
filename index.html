@@ -1,22 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Testing commits -->
 <head>
-  <meta charset="UTF-8">
-  <title>Gaddiel's Portfolio</title>
+  <meta charset="UTF-8" />
+  <title>Gaddiel Wambo Becker — Portfolio</title>
+
+  <!-- Clean web font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./stylesheet.css" />
+
+  <!-- Meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
 <body>
-  <h1>Gaddiel's Portfolio</h1>
-  <h2>I'm a Web Developer</h2>
-  <hr />
-  <h3><a href="./public/movie-ranking.html">Movie Ranking Project</a></h3>
-  <img src="./assets/images/movie-ranking.png" height="200" alt="movie ranking project preview"/>
-  <h3><a href="./public/birthday-invite.html">Birthday Invite Project</a></h3>
-  <img src="./assets/images/birthday-invite.png" height="200" alt="birthday invite project preview"/>
-  <hr />
-  <a href="./public/about.html">About Me</a>
-  <a href="./public/contact.html">Contact Me</a>
-</body>
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo-dot" aria-hidden="true"></span>
+      <a href="#" class="brand-name">Gaddiel Wambo Becker</a>
+    </div>
 
+    <nav class="nav">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a> <!-- anchor tab -->
+      <a href="https://www.linkedin.com/in/gaddiel-wambo-becker-95a263221/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/gxddi" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <!-- Hero / Top info -->
+  <section id="about" class="hero">
+    <h1>Hi, I’m <span class="accent">Gaddiel</span>.</h1>
+    <p class="lede">
+      <strong>Age:</strong> 18 &nbsp;•&nbsp;
+      <strong>Current favourite movie:</strong> <span class="movie">The Social Network</span>
+    </p>
+    <p class="sub">
+      Hi
+    </p>
+    <a class="cta" href="#projects">See my projects ↓</a>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="cards">
+      <!-- Card 1 -->
+      <article class="card">
+        <h3>Project One</h3>
+        <p>A concise one-liner about what it is and why it matters.</p>
+        <div class="card-actions">
+          <a href="#" class="btn">Live</a>
+          <a href="#" class="btn btn-ghost">Code</a>
+        </div>
+      </article>
+
+      <!-- Card 2 -->
+      <article class="card">
+        <h3>Project Two</h3>
+        <p>Another short description highlighting your role and impact.</p>
+        <div class="card-actions">
+          <a href="#" class="btn">Live</a>
+          <a href="#" class="btn btn-ghost">Code</a>
+        </div>
+      </article>
+
+      <!-- Card 3 -->
+      <article class="card">
+        <h3>Project Three</h3>
+        <p>Tech stack, problems solved, or what you learned.</p>
+        <div class="card-actions">
+          <a href="#" class="btn">Live</a>
+          <a href="#" class="btn btn-ghost">Code</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Gaddiel Wambo-Becker</p>
+  </footer>
+
+  <script>
+    // small nicety: current year; CSS handles smooth scroll.
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
